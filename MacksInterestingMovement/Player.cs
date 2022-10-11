@@ -37,6 +37,8 @@ namespace MacksInterestingMovement
         delegate void hMovement();
         hMovement horizontalMovement;
 
+       
+
         int playerNum;
 
         public Player(Game1 game, int playerNumber, string spriteName) : base(game, spriteName)
@@ -178,7 +180,6 @@ namespace MacksInterestingMovement
                     currentVertState = verticalState.ascending;
                     dir.Y = Math.Min(50, (dir.Y - jumpForce));
                     //Debug.WriteLine(currentVertState);
-
                 }
             }
             else if (input.ReleasedKey(input.inputKeys["Up"][playerNum]))
@@ -188,7 +189,7 @@ namespace MacksInterestingMovement
                     currentVertState = verticalState.descending;
                 }
             }
-            Debug.WriteLine(currentVertState);
+            //Debug.WriteLine(currentVertState);
             //TRYING to make jump go higher if button is held and add in a landMoveBuffer
             //so the as the player approaches the ground they can adjust x position slightly
             /*if (input.IsHoldingKey(input.inputKeys["Up"][playerNum]))
